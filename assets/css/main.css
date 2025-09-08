@@ -178,9 +178,12 @@ input, select, textarea {
 /* Container */
 
 	.container {
-		margin: 0 auto;
+		/* margin: 0 auto;
 		max-width: 100%;
-		width: 90em;
+		width: 90em; */
+		max-width: 1600px;   /* default is usually ~1100–1200px */
+		width: 95%;          /* almost full screen */
+		margin: 0 auto;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1569,7 +1572,7 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #ffffff;
+		background: #4543430f;
 		border-bottom: solid 1px #ccc;
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
@@ -2999,4 +3002,25 @@ input, select, textarea {
   transform: scale(1.15);
   filter: brightness(1.2);
 }
+
+
+/* Make all blog cards equal height */
+.row .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row .col-4 {
+  flex: 0 0 32%;   /* increase this percentage to make them wider */
+  max-width: 32%;
+}
+
 
